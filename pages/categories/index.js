@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Navbar } from 'react-bootstrap'
 import Department from '../../components/myComponents/Department'
 import CategoriesSec from '../../components/myComponents/CategoriesSec'

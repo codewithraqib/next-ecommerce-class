@@ -1,21 +1,13 @@
 import React from 'react'
 import { useRouter } from 'next/dist/client/router';
 import Watches from './Watches';
+import { useRecoilValue } from 'recoil';
+import { productsState } from '../../recoil/atoms/home';
 
 function Categories() {
-    const Electronics = [
-        { id: 0, image: "https://m.media-amazon.com/images/I/61f1YfTkTDL._AC_UL480_QL65_.jpg", desc: "Apple AirPods Pro (2nd Gen) Wireless Earbuds, Up to 2X More Active Noise Cancelling, Adaptive Transparency, Personalized Spatial Audio MagSafe Charging Case (Lightning) Bluetooth Headphones for iPhone", feedback: "/images/slides/stars.jpg", feedbackpoints: "45,745", overlap: "Best Seller" },
-        { id: 1, image: "https://m.media-amazon.com/images/I/713xuNx00oS._AC_UL320_.jpg", desc: "Apple AirPods Pro (2nd Gen) Wireless Earbuds, Up to 2X More Active Noise Cancelling, Adaptive Transparency, Personalized Spatial Audio MagSafe Charging Case (Lightning) Bluetooth Headphones for iPhone", feedback: "/images/slides/stars.jpg", feedbackpoints: "45,745", overlap: "Best Seller" },
-        { id: 2, image: "https://m.media-amazon.com/images/I/81uBzbSP1+L._AC_UL320_.jpg", desc: "Apple AirPods Pro (2nd Gen) Wireless Earbuds, Up to 2X More Active Noise Cancelling, Adaptive Transparency, Personalized Spatial Audio MagSafe Charging Case (Lightning) Bluetooth Headphones for iPhone", feedback: "/images/slides/stars.jpg", feedbackpoints: "45,745", overlap: "Best Seller" },
-        { id: 3, image: "https://m.media-amazon.com/images/I/61f1YfTkTDL._AC_UL480_QL65_.jpg", desc: "Apple AirPods Pro (2nd Gen) Wireless Earbuds, Up to 2X More Active Noise Cancelling, Adaptive Transparency, Personalized Spatial Audio MagSafe Charging Case (Lightning) Bluetooth Headphones for iPhone", feedback: "/images/slides/stars.jpg", feedbackpoints: "45,745", overlap: "Best Seller" },
-        { id: 4, image: "https://m.media-amazon.com/images/I/61f1YfTkTDL._AC_UL480_QL65_.jpg", desc: "Apple AirPods Pro (2nd Gen) Wireless Earbuds, Up to 2X More Active Noise Cancelling, Adaptive Transparency, Personalized Spatial Audio MagSafe Charging Case (Lightning) Bluetooth Headphones for iPhone", feedback: "/images/slides/stars.jpg", feedbackpoints: "45,745", overlap: "Best Seller" },
-        { id: 5, image: "https://m.media-amazon.com/images/I/61f1YfTkTDL._AC_UL480_QL65_.jpg", desc: "Apple AirPods Pro (2nd Gen) Wireless Earbuds, Up to 2X More Active Noise Cancelling, Adaptive Transparency, Personalized Spatial Audio MagSafe Charging Case (Lightning) Bluetooth Headphones for iPhone", feedback: "/images/slides/stars.jpg", feedbackpoints: "45,745", overlap: "Best Seller" },
-        { id: 6, image: "https://m.media-amazon.com/images/I/61f1YfTkTDL._AC_UL480_QL65_.jpg", desc: "Apple AirPods Pro (2nd Gen) Wireless Earbuds, Up to 2X More Active Noise Cancelling, Adaptive Transparency, Personalized Spatial Audio MagSafe Charging Case (Lightning) Bluetooth Headphones for iPhone", feedback: "/images/slides/stars.jpg", feedbackpoints: "45,745", overlap: "Best Seller" },
-        { id: 7, image: "https://m.media-amazon.com/images/I/61f1YfTkTDL._AC_UL480_QL65_.jpg", desc: "Apple AirPods Pro (2nd Gen) Wireless Earbuds, Up to 2X More Active Noise Cancelling, Adaptive Transparency, Personalized Spatial Audio MagSafe Charging Case (Lightning) Bluetooth Headphones for iPhone", feedback: "/images/slides/stars.jpg", feedbackpoints: "45,745", overlap: "Best Seller" },
-        { id: 7, image: "https://m.media-amazon.com/images/I/61f1YfTkTDL._AC_UL480_QL65_.jpg", desc: "Apple AirPods Pro (2nd Gen) Wireless Earbuds, Up to 2X More Active Noise Cancelling, Adaptive Transparency, Personalized Spatial Audio MagSafe Charging Case (Lightning) Bluetooth Headphones for iPhone", feedback: "/images/slides/stars.jpg", feedbackpoints: "45,745", overlap: "Best Seller" }
 
 
-    ]
+    const products = useRecoilValue(productsState)
     const router = useRouter();
 
     const handleRouteCart = () => {
@@ -56,7 +48,7 @@ function Categories() {
             </div>
 
             <div className='electronic_items'>
-                {Electronics?.map((item) => <Item item={item} />)}
+                {products?.map((item) => <Item item={item} />)}
             </div>
         </div>
     )

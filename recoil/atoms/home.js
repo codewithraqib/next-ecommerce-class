@@ -331,6 +331,24 @@ export const brandsState = atom({
   ],
 });
 
+
+export const productsState = atom({
+  key: "productsState",
+  default: [
+    { id: 0, image: "https://m.media-amazon.com/images/I/61f1YfTkTDL._AC_UL480_QL65_.jpg", desc: "Apple AirPods Pro (2nd Gen) Wireless Earbuds, Up to 2X More Active Noise Cancelling, Adaptive Transparency, Personalized Spatial Audio MagSafe Charging Case (Lightning) Bluetooth Headphones for iPhone", feedback: "/images/slides/stars.jpg", feedbackpoints: "45,745", overlap: "Best Seller" },
+    { id: 1, image: "https://m.media-amazon.com/images/I/713xuNx00oS._AC_UL320_.jpg", desc: "Apple AirPods Pro (2nd Gen) Wireless Earbuds, Up to 2X More Active Noise Cancelling, Adaptive Transparency, Personalized Spatial Audio MagSafe Charging Case (Lightning) Bluetooth Headphones for iPhone", feedback: "/images/slides/stars.jpg", feedbackpoints: "45,745", overlap: "Best Seller" },
+    { id: 2, image: "https://m.media-amazon.com/images/I/81uBzbSP1+L._AC_UL320_.jpg", desc: "Apple AirPods Pro (2nd Gen) Wireless Earbuds, Up to 2X More Active Noise Cancelling, Adaptive Transparency, Personalized Spatial Audio MagSafe Charging Case (Lightning) Bluetooth Headphones for iPhone", feedback: "/images/slides/stars.jpg", feedbackpoints: "45,745", overlap: "Best Seller" },
+    { id: 3, image: "https://m.media-amazon.com/images/I/61f1YfTkTDL._AC_UL480_QL65_.jpg", desc: "Apple AirPods Pro (2nd Gen) Wireless Earbuds, Up to 2X More Active Noise Cancelling, Adaptive Transparency, Personalized Spatial Audio MagSafe Charging Case (Lightning) Bluetooth Headphones for iPhone", feedback: "/images/slides/stars.jpg", feedbackpoints: "45,745", overlap: "Best Seller" },
+    { id: 4, image: "https://m.media-amazon.com/images/I/61f1YfTkTDL._AC_UL480_QL65_.jpg", desc: "Apple AirPods Pro (2nd Gen) Wireless Earbuds, Up to 2X More Active Noise Cancelling, Adaptive Transparency, Personalized Spatial Audio MagSafe Charging Case (Lightning) Bluetooth Headphones for iPhone", feedback: "/images/slides/stars.jpg", feedbackpoints: "45,745", overlap: "Best Seller" },
+    { id: 5, image: "https://m.media-amazon.com/images/I/61f1YfTkTDL._AC_UL480_QL65_.jpg", desc: "Apple AirPods Pro (2nd Gen) Wireless Earbuds, Up to 2X More Active Noise Cancelling, Adaptive Transparency, Personalized Spatial Audio MagSafe Charging Case (Lightning) Bluetooth Headphones for iPhone", feedback: "/images/slides/stars.jpg", feedbackpoints: "45,745", overlap: "Best Seller" },
+    { id: 6, image: "https://m.media-amazon.com/images/I/61f1YfTkTDL._AC_UL480_QL65_.jpg", desc: "Apple AirPods Pro (2nd Gen) Wireless Earbuds, Up to 2X More Active Noise Cancelling, Adaptive Transparency, Personalized Spatial Audio MagSafe Charging Case (Lightning) Bluetooth Headphones for iPhone", feedback: "/images/slides/stars.jpg", feedbackpoints: "45,745", overlap: "Best Seller" },
+    { id: 7, image: "https://m.media-amazon.com/images/I/61f1YfTkTDL._AC_UL480_QL65_.jpg", desc: "Apple AirPods Pro (2nd Gen) Wireless Earbuds, Up to 2X More Active Noise Cancelling, Adaptive Transparency, Personalized Spatial Audio MagSafe Charging Case (Lightning) Bluetooth Headphones for iPhone", feedback: "/images/slides/stars.jpg", feedbackpoints: "45,745", overlap: "Best Seller" },
+    { id: 7, image: "https://m.media-amazon.com/images/I/61f1YfTkTDL._AC_UL480_QL65_.jpg", desc: "Apple AirPods Pro (2nd Gen) Wireless Earbuds, Up to 2X More Active Noise Cancelling, Adaptive Transparency, Personalized Spatial Audio MagSafe Charging Case (Lightning) Bluetooth Headphones for iPhone", feedback: "/images/slides/stars.jpg", feedbackpoints: "45,745", overlap: "Best Seller" }
+
+
+  ]
+})
+
 // {label:"Home", image :"/images/cards/redcompra.png", route:"/"},
 // {label:"Electronics", image :"/images/cards/redcompra.png", route:"/electronics"},
 // {label:"Accessories", image :"/images/cards/redcompra.png", route:"/accessories"},

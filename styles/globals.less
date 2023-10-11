@@ -803,8 +803,9 @@ div[aria-labelledby="live-chat-modal"] .modal-dialog {
 }
 
 .electronic_wrapper {
+  width: 328px;
   .electronicitem_img {
-    width: 328px;
+    // width: 328px;
     // background-color: #dadada;
     box-shadow: 0 0 15px #dadada;
     padding: 30px;
@@ -832,7 +833,9 @@ div[aria-labelledby="live-chat-modal"] .modal-dialog {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    border: 0.8px solid #dadada;
+    border-bottom: 0.8px solid #dadada;
+    border-left: 0.8px solid #dadada;
+    border-right: 0.8px solid #dadada;
   }
   .feedback {
     display: flex;
@@ -1112,5 +1115,21 @@ div[aria-labelledby="live-chat-modal"] .modal-dialog {
       top: 25px;
       color: red;
     }
+  }
+}
+
+//Catagories Styling staerts
+
+.catagories_checkbox {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+  align-items: center;
+}
+
+.DepartmentLinks {
+  .catagories_heading {
+    font-size: 1.4rem;
+    font-weight: bold;
   }
 }
