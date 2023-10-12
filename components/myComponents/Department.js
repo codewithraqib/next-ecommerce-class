@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import Slider from '@mui/material/Slider';
 import { useRecoilValue } from 'recoil';
 import { productsState } from '../../recoil/atoms/home';
-function valuetext(value) {
-    return `${value}°C`;
-}
+// function valuetext(value) {
+//     return `${value}°C`;
+// }
 function Department() {
 
     const products = useRecoilValue(productsState)
@@ -23,13 +23,17 @@ function Department() {
         },
     ])
 
+    const [brands, setBrands] = useState([
+        { id: 1, name: "BAJAJ" },
+        { id: 2, name: "MAHINDRA" },
+    ])
 
 
-    const [value, setValue] = React.useState([0, 100]);
+    const [value, setValue] = useState([0, 0]);
 
     const handleChange = (event, newValue) => {
 
-        console.log({ newValue })
+        // console.log({ newValue })
         setValue(newValue);
     };
 
@@ -37,13 +41,24 @@ function Department() {
     useEffect(() => {
 
         let min = 0;
-        let max = 50;
+        let max = 0;
 
+        products.forEach(product => {
+            if (product.feedbackpoints > max) {
+                max = product.feedbackpoints
 
+            }
+            if (product.feedbackpoints < min) {
+                min = product.feedbackpoints
+            }
+            // console.log("min", max);
+        })
 
         setValue([min, max])
 
+        console.log({ value });
     }, [products])
+
 
 
 
@@ -71,13 +86,25 @@ function Department() {
                 renderThumb={(props, state) => <div {...props}>{state.valueNow}</div>}
             /> */}
 
-            <Slider
-                getAriaLabel={() => 'Temperature range'}
-                value={value}
-                onChange={handleChange}
-                valueLabelDisplay="auto"
-                getAriaValueText={(val) => valuetext(val)}
-            />
+            <div className="price_slider_wrapper">
+                <div className='price_slider_heading'>Price</div>
+                <Slider
+                    getAriaLabel={() => 'Temperature range'}
+                    value={value}
+                    onChange={handleChange}
+                    valueLabelDisplay="auto"
+                    // getAriaValueText={(val) => valuetext(val)}
+                    // max={value}
+                    max={1000}
+                />
+            </div>
+
+
+            {/* //brands */}
+            <div className="brands_wrapper">
+                <div className='brands_heading'>Brand</div>
+                {brands.map((brand, key) => <Brands brand={brand} key={key} />)}
+            </div>
 
         </div>
     )
@@ -91,5 +118,13 @@ const CatagoriesList = ({ catagorie, key }) => {
             <label htmlFor={key}>{catagorie.name}</label>
             <input type="checkbox" id={key} />
         </div>
+    </div>
+}
+
+
+const Brands = ({ brand, key }) => {
+    return <div className='brand_cont' key={key}>
+        <label htmlFor={key}>{brand.name}</label>
+        <input type="checkbox" id={key} />
     </div>
 }
