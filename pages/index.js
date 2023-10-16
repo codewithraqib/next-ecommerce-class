@@ -22,12 +22,12 @@ const Home = () => {
       <div className="cmr_container mt40 content_wrapper">
         <Cmr />
       </div>
-      {/* <div className="location_container mt40 screen_margin">
+      <div className="location_container mt40 screen_margin">
         <Locations />
       </div>
       <div className="slideimg_container mt40 screen_margin">
         <SlideimgsSec />
-      </div> */}
+      </div>
     </div>
   );
 }

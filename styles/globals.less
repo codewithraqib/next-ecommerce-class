@@ -253,7 +253,7 @@ input {
   // margin-right: 2vw;
 }
 
-.content_wrapper{
+.content_wrapper {
   width: 90vw;
   margin: auto;
 }
@@ -319,17 +319,16 @@ input {
     img {
       width: 100%;
       height: 100%;
-
     }
   }
   .mufiy_wrapper {
     background-color: rgb(255, 199, 44);
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      padding-left: 20px;
-      position: relative;
-      // overflow: hidden;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    position: relative;
+    // overflow: hidden;
     // .mufiy_yellow {
     //   position: relative;
     //   // background-color: rgb(255, 199, 44);
@@ -345,7 +344,7 @@ input {
     //   color: black;
     // }
 
-    .yellow_text{
+    .yellow_text {
       width: 40%;
     }
     .mufiy_blue {
@@ -361,8 +360,8 @@ input {
       align-items: center;
       padding-left: 20px;
 
-      .blue_overlay_text{
-        width:80%
+      .blue_overlay_text {
+        width: 80%;
       }
 
       // span {
@@ -402,8 +401,12 @@ input {
 
 // slide image section styling starts from here
 .slideimgs {
-  display: flex;
-  gap: 20px;
+  width: 100%;
+  // display: flex;
+  // flex-direction: column;
+
+  img {
+  }
 }
 .slideimgsfnc {
   .slide-img {
@@ -421,15 +424,13 @@ input {
   }
   .overlaptext {
     position: absolute;
-    display: flex;
-    align-items: center;
     padding: 10px 20px;
     color: rgb(81, 191, 89);
     bottom: 0px;
     background-color: rgb(31, 44, 75);
     border-radius: 0px 0 20px 20px;
     width: 100%;
-    height: 80px;
+    height: 60px;
   }
   .hoveredtext {
     position: absolute;
@@ -452,8 +453,12 @@ input {
     z-index: 10000;
     width: 50px;
     height: 50px;
-    &:hover {
-      // background-image: url("https://turbusdweb.kupos.cl/images/turbus/services/Turbus-icon-active.svg");
-    }
+  }
+}
+.alice-carousel__stage {
+  display: flex;
+  gap: 20px;
+  ul {
+    text-decoration: none;
   }
 }
