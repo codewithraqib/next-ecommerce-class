@@ -328,22 +328,6 @@ input {
     align-items: center;
     padding-left: 20px;
     position: relative;
-    // overflow: hidden;
-    // .mufiy_yellow {
-    //   position: relative;
-    //   // background-color: rgb(255, 199, 44);
-    //   display: flex;
-    //   align-items: center;
-    //   height: 190px;
-    //   // width: 94%;
-    // }
-    // span {
-    //   position: absolute;
-    //   width: 40%;
-    //   margin-left: 10px;
-    //   color: black;
-    // }
-
     .yellow_text {
       width: 40%;
     }
@@ -363,14 +347,6 @@ input {
       .blue_overlay_text {
         width: 80%;
       }
-
-      // span {
-      //   position: absolute;
-      //   width: 90%;
-      //   bottom: 15px;
-      //   color: white;
-      //   margin-left: 10px;
-      // }
     }
   }
 }
@@ -400,18 +376,15 @@ input {
 }
 
 // slide image section styling starts from here
-.slideimgs {
-  width: 100%;
-  // display: flex;
-  // flex-direction: column;
 
-  img {
-  }
-}
 .slideimgsfnc {
+  position: relative;
+  width: 180px;
+
   .slide-img {
-    position: relative;
     border-radius: 20px;
+
+    width: 100%;
 
     &:hover {
       transform: translate(0px, -45px);
@@ -419,12 +392,12 @@ input {
     }
   }
   img {
-    width: 210px;
-    height: 302px;
+    width: 100%;
+    height: 280px;
   }
   .overlaptext {
     position: absolute;
-    padding: 10px 20px;
+    padding: 10px;
     color: rgb(81, 191, 89);
     bottom: 0px;
     background-color: rgb(31, 44, 75);
@@ -436,29 +409,26 @@ input {
     position: absolute;
     display: flex;
     align-items: center;
-    padding: 10px 20px;
-    font-size: 20px;
-    height: 120px;
+    padding: 15px;
+    height: 50%;
     width: 100%;
     bottom: 0;
-    background-color: rgb(81, 191, 89);
+    background-color: rgb(200, 234, 86);
     color: rgb(31, 44, 75);
     border-radius: 0 0 20px 20px;
   }
 
   .overlap_img {
     position: absolute;
-    top: 0px;
-    right: 0;
+    top: -1px;
+    right: -3px;
     z-index: 10000;
     width: 50px;
     height: 50px;
   }
 }
-.alice-carousel__stage {
-  display: flex;
-  gap: 20px;
-  ul {
-    text-decoration: none;
-  }
+.slideimgs {
+  margin-top: 60px;
+  width: 70vw;
+  margin: auto;
 }
