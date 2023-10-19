@@ -18,7 +18,7 @@ const Locations = () => {
     return (
         <div className='location_wrapper'>
             <div className='logo_location mb20'>
-                <img src="/images/homeimgs/location-logo.png" alt="" width={50} height={50} />
+                <img src="/images/homeimgs/location_icon.png" alt="" width={50} height={50} />
                 <div className="location_text">
                     <span className='font22'>Destinos</span><br />
                     <span className='font24 bold-text'>más buscados</span>
