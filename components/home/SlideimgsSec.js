@@ -30,7 +30,7 @@ const Slide = ({ item }) => {
             <div className='slide-img' onMouseEnter={handleHover} onMouseLeave={handleHover}>
                 <img src={item.image} alt="" />
                 <img className='overlap_img' src={isHovered ? item.hovered_img : item.nothovered_img} alt='' />
-                <div className={isHovered ? 'hoveredtext font16' : 'overlaptext font14 bold-text'} >{isHovered ? item.hoveredtext : item.text}</div>
+                <div className={isHovered ? 'hoveredtext font11' : 'overlaptext font14 bold-text'} >{isHovered ? item.hoveredtext : item.text}</div>
             </div>
         </div>
     )
@@ -39,7 +39,7 @@ const SlideimgsSec = () => {
 
     const responsiveitems = {
         0: { items: 1 },
-        568: { items: 2 },
+        568: { items: 3 },
         1024: { items: 4 },
     };
     return (
