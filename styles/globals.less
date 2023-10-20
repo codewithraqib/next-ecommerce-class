@@ -237,6 +237,12 @@ input {
 .mb-20 {
   margin-bottom: 20px;
 }
+.mt-20 {
+  margin-top: 20px;
+}
+.mt-10 {
+  margin-top: 10px;
+}
 
 .mb-30 {
   margin-bottom: 30px;
@@ -247,6 +253,9 @@ input {
 .mb-50 {
   margin-bottom: 50px;
 }
+.text-align {
+  text-align: center;
+}
 
 .screen_margin {
   margin-left: 5vw;
@@ -256,6 +265,9 @@ input {
 .content_wrapper {
   width: 90vw;
   margin: auto;
+}
+.border-bottom {
+  border-bottom: 2px solid rgb(255, 199, 44);
 }
 
 //NAVBAR STYLING STARTS
@@ -425,6 +437,121 @@ input {
 }
 .slideimgs {
   margin-top: 60px;
-  width: 60vw;
+  width: 90vw;
   margin: auto;
+}
+
+//muvify club styling starts from here
+.club_container {
+  display: grid;
+  grid-template-columns: 20% 70% auto;
+  gap: 50px;
+  .club_card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(255, 199, 44);
+    height: 250px;
+    width: 200px;
+    border-radius: 20px;
+    // padding: 10px;
+    .info_icon {
+      font-size: 50px;
+      font-weight: 100;
+    }
+    .title_container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      font-size: 14px;
+      font-weight: 500;
+      width: 100%;
+      cursor: pointer;
+      .active_title {
+        background-color: rgb(31, 44, 75) !important;
+        color: rgb(255, 199, 44) !important;
+        width: 100%;
+        padding: 5px 10px;
+        margin-bottom: 5px;
+      }
+      .club_title {
+        padding: 5px 10px;
+        margin-bottom: 5px;
+
+        &:hover {
+          background-color: rgb(31, 44, 75);
+          color: rgb(255, 199, 44);
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.club_card_info {
+  width: 100%;
+}
+.title_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  display: none;
+}
+.active_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+//sponsers
+.sponsers {
+  background-color: rgb(31, 44, 75);
+  width: 55vw;
+  height: 55px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  img {
+    width: 60px;
+  }
+}
+.currency_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  align-items: center;
+  width: 45vw;
+  img {
+    width: 160px;
+    height: 200px;
+  }
+  .currencydetails {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    span {
+      text-align: center;
+      font-size: 14px;
+      color: #000;
+      font-weight: 200;
+    }
+    .peso_muvify {
+      background-color: rgb(255, 199, 44);
+      padding: 8px 15px;
+      border-radius: 18px;
+      width: fit-content;
+      // width: 0%;
+    }
+  }
+}
+.heading::after {
+  content: "";
+  display: inherit;
+  width: 50%;
+  margin: 2px auto;
+  border-top: 3px solid rgb(255, 199, 44);
 }
