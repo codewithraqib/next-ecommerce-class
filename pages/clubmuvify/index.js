@@ -83,7 +83,7 @@ const index = () => {
 
                 {/* Cateforias de socio */}
                 <div className={toogleState == 2 ? 'active_content title_content' : "title_content"}>
-                    <div className='heading text-align  font20 bold-text  mb-40'>Categorías de socio</div>
+                    <div className='heading text-align  font16 bold-text  mb-40'>Categorías de socio</div>
                     <div className='desc font11'>
                         Muvify tiene 3 categorías para entregarte una experiencia única según tus hábitos de viajes.
                     </div>
@@ -164,22 +164,121 @@ const index = () => {
 
                 {/* Peses Muvify */}
                 <div className={toogleState == 3 ? 'active_content title_content' : "title_content"}>
-                    <div className='heading text-align  font20 bold-text  mb-40'>¿Qué es Muvify ?</div>
+                    <div className='heading text-align  font16 bold-text  mb-20'>Pesos Muvify</div>
                     <div className='desc font11'>
-                        3 Muvify es nuestro programa de pasajero frecuente, es una forma en la que el mundo se mueve mejor. La agilidad y conveniencia para que vayas a donde quieras, ​¡porque nos encanta que viajes en bus!
+                        Podrás acumular Pesos Muvify cada vez que viajes en alguna de las empresas Turbus, Cóndor, JAC y Bio Bio, siempre que hayas adquirido tus pasajes a través de:
                     </div>
-                    <div className='desc font11'>
-                        ¡Ahora el que acumula es el que viaja! Gana pesos Muvify cada vez que viajes en nuestras compañías asociadas.</div>
+                    <div className="peses_card_container">
+                        <div className="peses_card">
+                            <img src="https://turbusdweb.kupos.cl/images/club-muvify/muvify-weights/www-icon.svg" alt="" />
+                            <span>Nuestros portales
+
+                            </span>
+                        </div>
+                        <div className="peses_card">
+                            <img src="https://turbusdweb.kupos.cl/images/club-muvify/muvify-weights/building-icon.svg" alt="" />
+                            <span>Oficinas de venta
+
+                            </span>
+                        </div>
+                        <div className="peses_card">
+                            <img src="https://turbusdweb.kupos.cl/images/club-muvify/muvify-weights/ticket-hand-icon.svg" alt="" />
+                            <span>Venta empresas a través de Simplus
+
+                            </span>
+                        </div>
+                    </div>
+                    <div className="pesos_desc_container">
+                        <div className='title text-align font12'>¿Cómo canjear mis pesos Muvify?</div>
+                        <div className="desc font11">Por ser parte de Muvify, puedes canjear tus Pesos Muvify en tu compra por la totalidad de tus pasajes. Tus Pesos Muvify pueden ser usados como cualquier otro medio de pago.</div>
+                        <div className="pesos_cards_container">
+                            <div className='Perteneces_container'>
+                                <img src="https://turbusdweb.kupos.cl/images/club-muvify/muvify-weights/illustration-1-icon.svg" alt="" />
+                                <span className='font11'>Perteneces a la categoría</span>
+                                <span className='numbers'>1</span>
+
+                            </div> <div className='Perteneces_container'>
+                                <img src="https://turbusdweb.kupos.cl/images/club-muvify/muvify-weights/illustration-2-icon.svg" alt="" />
+                                <span className='font11'>Perteneces a la categoría</span>
+                                <span className='numbers'>2</span>
+
+                            </div> <div className='Perteneces_container'>
+                                <img src="https://turbusdweb.kupos.cl/images/club-muvify/muvify-weights/illustration-3-icon.svg" alt="" />
+                                <span className='font11'>Perteneces a la categoría</span>
+                                <span className='numbers'>3</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Descuentos exclusivos */}
                 <div className={toogleState == 4 ? 'active_content title_content' : "title_content"}>
-                    <div className='heading  text-align font20 bold-text  mb-40'>¿Qué es Muvify ?</div>
+                    <div className='heading  text-align font16 bold-text  mb-40'>Descuentos exclusivos</div>
                     <div className='desc font11'>
-                        4 Muvify es nuestro programa de pasajero frecuente, es una forma en la que el mundo se mueve mejor. La agilidad y conveniencia para que vayas a donde quieras, ​¡porque nos encanta que viajes en bus!
+                        Accede a descuentos exclusivos por ser parte del programa Muvify.
                     </div>
-                    <div className='desc font11'>
-                        ¡Ahora el que acumula es el que viaja! Gana pesos Muvify cada vez que viajes en nuestras compañías asociadas.</div>
+                    <div className="pesos_cards_container">
+                        <div className='Perteneces_container'>
+                            <img src="https://turbusdweb.kupos.cl/images/club-muvify/exclusive-discounts/coppelia-icon.svg" alt="" />
+                            <div className='star-text'>
+                                <span><FaStarOfLife className='star_icon' />
+                                    INCIAL </span>  <span><FaStarOfLife className='star_icon' /><FaStarOfLife className='star_icon' />
+                                    EXTA </span>  <span><FaStarOfLife className='star_icon' /><FaStarOfLife className='star_icon' /><FaStarOfLife className='star_icon' />
+                                    INCIAL </span>
+                            </div>
+                            <span className='details_icon'>         <AiOutlineInfoCircle className='info_icon' /></span>
+
+                        </div>      <div className='Perteneces_container'>
+                            <img src="https://turbusdweb.kupos.cl/images/club-muvify/exclusive-discounts/assist-card-icon.svg" className="ibis_img" alt="" />
+                            <div className='star-text'>
+                                <span><FaStarOfLife className='star_icon' />
+                                    INCIAL </span>  <span><FaStarOfLife className='star_icon' /><FaStarOfLife className='star_icon' />
+                                    EXTA </span>  <span><FaStarOfLife className='star_icon' /><FaStarOfLife className='star_icon' /><FaStarOfLife className='star_icon' />
+                                    INCIAL </span>
+                            </div>
+                            <span className='details_icon'>         <AiOutlineInfoCircle className='info_icon' /></span>
+
+                        </div>      <div className='Perteneces_container'>
+                            <img src="https://turbusdweb.kupos.cl/images/club-muvify/exclusive-discounts/eventos-icon.svg" className="ibis_img" alt="" />
+                            <div className='star-text'>
+                                <span><FaStarOfLife className='star_icon' /><FaStarOfLife className='star_icon' /><FaStarOfLife className='star_icon' />
+                                    PRO </span>
+                            </div>
+                            <span className='details_icon'>         <AiOutlineInfoCircle className='info_icon' /></span>
+
+                        </div>
+                        <div className='Perteneces_container'>
+                            <img src="https://turbusdweb.kupos.cl/images/club-muvify/exclusive-discounts/totto-logo-icon.svg" className="ibis_img" alt="" />
+                            <div className='star-text'>
+                                <span><FaStarOfLife className='star_icon' />
+                                    INCIAL </span>  <span><FaStarOfLife className='star_icon' /><FaStarOfLife className='star_icon' />
+                                    EXTA </span>  <span><FaStarOfLife className='star_icon' /><FaStarOfLife className='star_icon' /><FaStarOfLife className='star_icon' />
+                                    INCIAL </span>
+                            </div>
+                            <span className='details_icon'>         <AiOutlineInfoCircle className='info_icon' /></span>
+
+                        </div>     <div className='Perteneces_container'>
+                            <img src="https://turbusdweb.kupos.cl/images/club-muvify/exclusive-discounts/ibis-logo-icon.svg" className="ibis_img" alt="" />
+                            <div className='star-text'>
+                                <span><FaStarOfLife className='star_icon' />
+                                    INCIAL </span>  <span><FaStarOfLife className='star_icon' /><FaStarOfLife className='star_icon' />
+                                    EXTA </span>  <span><FaStarOfLife className='star_icon' /><FaStarOfLife className='star_icon' /><FaStarOfLife className='star_icon' />
+                                    INCIAL </span>
+                            </div>
+                            <span className='details_icon'>         <AiOutlineInfoCircle className='info_icon' /></span>
+
+                        </div>     <div className='Perteneces_container'>
+                            <img src="https://turbusdweb.kupos.cl/images/club-muvify/exclusive-discounts/tarragona-icon-new.svg" className="ibis_img" alt="" />
+                            <div className='star-text'>
+                                <span><FaStarOfLife className='star_icon' />
+                                    INCIAL </span>  <span><FaStarOfLife className='star_icon' /><FaStarOfLife className='star_icon' />
+                                    EXTA </span>  <span><FaStarOfLife className='star_icon' /><FaStarOfLife className='star_icon' /><FaStarOfLife className='star_icon' />
+                                    INCIAL </span>
+                            </div>
+                            <span className='details_icon'>         <AiOutlineInfoCircle className='info_icon' /></span>
+
+                        </div>
+                    </div>
                 </div>
             </div >
 
