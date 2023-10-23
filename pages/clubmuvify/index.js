@@ -6,10 +6,12 @@ import Socio from '../../components/clubMuvify/Socio'
 import Pesos from '../../components/clubMuvify/Pesos'
 import Desuentos from '../../components/clubMuvify/Desuentos'
 import Navbar from '../../components/ui-elements/nav-bar/navbar'
+import Model from '../../components/clubMuvify/Model'
 
 
-const index = ({ showModel }) => {
+const index = () => {
     const [toogleState, setactive] = useState(1)
+    const [showModel, setShowModel] = useState(false)
     const handletoogle = (index) => {
         setactive(index)
         console.log(index);
@@ -34,15 +36,15 @@ const index = ({ showModel }) => {
 
 
 
-                    {toogleState == 1 ? <QuesMuvify /> : toogleState == 2 ? <Socio /> : toogleState == 3 ? <Pesos /> : toogleState == 4 ? <Desuentos /> : null}
+                    {toogleState == 1 ? <QuesMuvify /> : toogleState == 2 ? <Socio /> : toogleState == 3 ? <Pesos /> : toogleState == 4 ? <Desuentos setShowModel={setShowModel} /> : null}
 
 
 
 
                 </div >
-
+                {showModel && <Model />}
             </div >
-            {showModel && <Model />}
+
 
         </>
     )

@@ -4,7 +4,7 @@ import { FaStarOfLife } from 'react-icons/fa'
 import { useState } from 'react'
 import Model from './Model'
 
-const Desuentos = ({ showModel }) => {
+const Desuentos = ({ setShowModel }) => {
     const pesos_content = [
         { id: 0, image: "https://turbusdweb.kupos.cl/images/club-muvify/exclusive-discounts/coppelia-icon.svg", star_text: "INCIAL", star_text_extra: "EXTRA", star_text_pro: "PRO", star: <FaStarOfLife className='star_icon' />, detail_icon: <AiOutlineInfoCircle /> },
         { id: 1, image: "https://turbusdweb.kupos.cl/images/club-muvify/exclusive-discounts/assist-card-icon.svg", star_text: "INCIAL", star_text_extra: "EXTRA", star_text_pro: "PRO", star: <FaStarOfLife className='star_icon' />, detail_icon: <AiOutlineInfoCircle /> },
@@ -15,7 +15,7 @@ const Desuentos = ({ showModel }) => {
     ]
 
     const Pesos = ({ item }) => {
-        const [showModel, setShowModel] = useState(false)
+        // const [showModel, setShowModel] = useState(false)
         return (
             <div className='Perteneces_container'>
                 <img src={item.image} className='ibis_img' alt="" />
@@ -45,4 +45,4 @@ const Desuentos = ({ showModel }) => {
     )
 }
 
-export default Desuentos
+export default Desuentos;
