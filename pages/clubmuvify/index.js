@@ -20,7 +20,7 @@ const index = () => {
     return (
         <>
             <Navbar />
-            <div className='club_container mt-40 screen_margin mb'>
+            <div className='club_container mt-40 screen_margin mb' onClick={() => setShowModel(false)}>
                 <div className='club_card'>
                     <AiOutlineInfoCircle className='info_icon' />
                     <span>Club Muvify</span>
