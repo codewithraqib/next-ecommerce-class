@@ -1,8 +1,10 @@
 import React from 'react'
 import { AiOutlineInfoCircle } from 'react-icons/ai'
 import { FaStarOfLife } from 'react-icons/fa'
+import { useState } from 'react'
+import Model from './Model'
 
-const Desuentos = () => {
+const Desuentos = ({ showModel }) => {
     const pesos_content = [
         { id: 0, image: "https://turbusdweb.kupos.cl/images/club-muvify/exclusive-discounts/coppelia-icon.svg", star_text: "INCIAL", star_text_extra: "EXTRA", star_text_pro: "PRO", star: <FaStarOfLife className='star_icon' />, detail_icon: <AiOutlineInfoCircle /> },
         { id: 1, image: "https://turbusdweb.kupos.cl/images/club-muvify/exclusive-discounts/assist-card-icon.svg", star_text: "INCIAL", star_text_extra: "EXTRA", star_text_pro: "PRO", star: <FaStarOfLife className='star_icon' />, detail_icon: <AiOutlineInfoCircle /> },
@@ -11,17 +13,20 @@ const Desuentos = () => {
         { id: 4, image: "https://turbusdweb.kupos.cl/images/club-muvify/exclusive-discounts/ibis-logo-icon.svg", star_text: "INCIAL", star_text_extra: "EXTRA", star_text_pro: "PRO", star: <FaStarOfLife className='star_icon' />, detail_icon: <AiOutlineInfoCircle /> },
         { id: 5, image: "https://turbusdweb.kupos.cl/images/club-muvify/exclusive-discounts/tarragona-icon-new.svg", star_text: "INCIAL", star_text_extra: "EXTRA", star_text_pro: "PRO", star: <FaStarOfLife className='star_icon' />, detail_icon: <AiOutlineInfoCircle /> }
     ]
+
     const Pesos = ({ item }) => {
+        const [showModel, setShowModel] = useState(false)
         return (
             <div className='Perteneces_container'>
                 <img src={item.image} className='ibis_img' alt="" />
                 <div className='star-text'>
 
-                    <span>  {item.star} {item.star_text}</span>
-                    <span>{item.star} {item.star}{item.star_text_extra}</span>
-                    <span>{item.star}{item.star}{item.star}{item.star_text_pro}</span>
+                    {item.star_text && <span>  {item.star} {item.star_text}</span>}
+                    {item.star_text_extra && <span>{item.star} {item.star}{item.star_text_extra}</span>}
+                    {item.star_text_pro && <span>{item.star}{item.star}{item.star}{item.star_text_pro}</span>}
                 </div >
-                <span className='details_icon'>{item.detail_icon}</span>
+                <span className='details_icon' onClick={() => setShowModel(true)}>{item.detail_icon}</span>
+
             </div >)
     }
     return (

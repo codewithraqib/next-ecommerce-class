@@ -48,7 +48,7 @@ const QuesMuvify = () => {
                     <span>
                         Los pesos del programa serán equivalentes a $1 para efectos de compras y canjes de pasajes.
                     </span>
-                    <span className='peso_muvify bold-text font14'>1 peso Muvify = $1 CLP</span>
+                    <span className='peso_muvify bold-text font13'>1 Peso Muvify = $1 CLP</span>
                 </div>
             </div>
             <span className='bold-text'>¿Qué beneficios obtengo al inscribirme en el Club Muvify?</span>
