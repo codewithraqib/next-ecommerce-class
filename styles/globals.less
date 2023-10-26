@@ -782,17 +782,31 @@ input {
 }
 
 //model component styling starts
-.model_wrapper {
+.modal_wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 100;
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  .model_container {
-    width: 60vw;
-    height: 90vh;
-    background-color: red;
-  }
+}
+#modal-modal-title {
+  float: right;
+  color: red;
+}
+#box {
+  border-radius: 20px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#box::-webkit-scrollbar {
+  width: 10px;
+}
+
+#box::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+#box::-webkit-scrollbar-thumb {
+  background-color: black;
+  outline: 1px solid slategrey;
+  border-radius: 20px;
 }

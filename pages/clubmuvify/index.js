@@ -6,21 +6,15 @@ import Socio from '../../components/clubMuvify/Socio'
 import Pesos from '../../components/clubMuvify/Pesos'
 import Desuentos from '../../components/clubMuvify/Desuentos'
 import Navbar from '../../components/ui-elements/nav-bar/navbar'
-import Model from '../../components/clubMuvify/Model'
-
-
 const index = () => {
     const [toogleState, setactive] = useState(1)
-    const [showModel, setShowModel] = useState(false)
     const handletoogle = (index) => {
         setactive(index)
-        console.log(index);
     }
-
     return (
         <>
             <Navbar />
-            <div className='club_container mt-40 screen_margin mb' onClick={() => setShowModel(false)}>
+            <div className='club_container mt-40 screen_margin mb-404'>
                 <div className='club_card'>
                     <AiOutlineInfoCircle className='info_icon' />
                     <span>Club Muvify</span>
@@ -33,19 +27,9 @@ const index = () => {
                     </div></div>
 
                 <div className='club_card_info'>
-
-
-
-                    {toogleState == 1 ? <QuesMuvify /> : toogleState == 2 ? <Socio /> : toogleState == 3 ? <Pesos /> : toogleState == 4 ? <Desuentos setShowModel={setShowModel} /> : null}
-
-
-
-
+                    {toogleState == 1 ? <QuesMuvify /> : toogleState == 2 ? <Socio /> : toogleState == 3 ? <Pesos /> : toogleState == 4 ? <Desuentos /> : null}
                 </div >
-                {showModel && <Model />}
             </div >
-
-
         </>
     )
 }
