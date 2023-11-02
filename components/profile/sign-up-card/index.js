@@ -75,8 +75,8 @@ export const SignUpCard = () => {
 
             <Button btnText="Continue to phone varification" btnColor="111111" textcolor="fff" onClick={handleSubmit} />
 
-            <div className="sign_up_link" onClick={() => changeAuth("login")}>
-                Do you have an IKEA account ? <span>Login:</span>
+            <div className="sign_up_link">
+                Do you have an IKEA account ? <span className="bold_text bb"  onClick={() => changeAuth("login")} >Login:</span>
 
             </div>
         </div>

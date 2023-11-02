@@ -40,16 +40,15 @@ export const SignInCard = () => {
     return (
         <div className="login_right_container">
             <Input label="Email or verified Mobile Number" placeholder="Email Or Mobile Number" type="text" value={inputText?.email} handleChange={val => onTextChange(val, "email")} error={inputText?.emailError} errorMesage={inputText?.emailErrorMessage} />
-            {/* 
-            <Input label="Password" placeholder="Password" type="password" value={password} handleChange={val => setPassword(val)} /> */}
+           
             <PasswordInput label="Password" placeholder="Password" type="password" handleChange={val => onTextChange(val, "password")} value={inputText?.password} errorMesage={inputText?.passwordErrorMessage} error={inputText?.passworError} />
 
             <Checkbox type="checkbox" label="Stay Signed in until you sign out" handleChange={checked => setChecked(!checked)} defaultChecked={checked} />
 
             <Button btnText="Continue" btnColor="CCFF5F" textcolor="111111" onClick={handleSubmit} />
 
-            <div className="sign_up_link" onClick={() => changeAuth("signup")}>
-                Do not have an IKEA account yet? <span>Create one now:</span>
+            <div className="sign_up_link">
+                Do not have an IKEA account yet? <span className="bold_text bb"  onClick={() => changeAuth("signup")} >Create one now:</span>
             </div>
 
         </div>

@@ -1,18 +1,13 @@
-import React from 'react'
+import * as React from 'react';
+import Checkbox from '@mui/material/Checkbox';
 
-const Checkbox = (props) => {
-    return (
-        <div className='checkbox_container'>
-            <input
-                type={props.type}
-                value={props.value}
-                onChange={e => props.handleChange(e.target.value)}
-                placeholder={props.placeholder}
-                defaultChecked={props.defaultChecked}
-            />
-            <label>{props.label}</label>
-        </div>
-    )
+const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+
+export default function Checkboxes({label}) {
+  return (
+    <div>
+      <Checkbox {...label}/>
+      <label htmlFor=''>{label}</label>
+    </div>
+  );
 }
-
-export default Checkbox

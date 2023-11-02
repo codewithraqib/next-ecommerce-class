@@ -1,14 +1,16 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import SimpleImageSlider from "react-simple-image-slider";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import Navbar from "../components/ui-elements/nav-bar/navbar";
+import Heroslide from "../components/heroslide/Heroslide"
 import Locations from "../components/home/Locations";
 import SlideimgsSec from "../components/home/SlideimgsSec";
 import HeadingBold from "../components/ui-elements/HeadingBold";
 import Catagories from "../components/catagories/catagories";
 
 
-const Home = () => {
+const Home = ({Carousel}) => {
   const highlights = [
     {
       id: 1,
@@ -40,30 +42,16 @@ const Home = () => {
     },
 
   ]
-  const router = useRouter();
-  const { t } = useTranslation("common");
+
 
   return (
     <div className="homepage_container">
       <Navbar />
+      <Heroslide/>
 
-      <div className="hero_wrapper">
-
-        <img src="/images/generic/hero-img.jpeg" alt="" />
-        <Overlay />
-      </div>
       <div className="cmr_container mt40 content_wrapper">
         <Cmr />
       </div>
-      {/* <div className="location_container mt40 screen_margin">
-        <Locations />
-      </div>
-      <div className="slideimg_container mt40 screen_margin">
-        <SlideimgsSec />
-      </div> */}
-
-
-      {/* highlights container  */}
 
       <div className="highlights_wrpper">
         <HeadingBold text="¡Llevamos tus viajes" boldText="al siguiente nivel!" fontSize="font22" />
@@ -72,27 +60,13 @@ const Home = () => {
         </div>
       </div>
 
-
       <Catagories />
+  
     </div>
-
-
-
-
-
+  
   );
 }
 
-
-const Overlay = () => {
-  return (
-    <div className="overlay_wrapper">
-      <div className="text white_text bold_text font20 ">lorem ipsum dolor sit amet</div>
-      <div className="text white_text bold_text font20 ">lorem ipsum dolor sit amet</div>
-      <div className="text white_text bold_text font20 ">lorem ipsum dolor sit amet</div>
-    </div>
-  )
-}
 
 
 const Cmr = () => {

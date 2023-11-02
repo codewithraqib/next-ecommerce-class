@@ -13,6 +13,10 @@ const Navbar = () => {
                 <div className='link'>About us</div>
                 <div className='link' onClick={() => router.push('/movify')}>Movify</div>
                 <div className='link' onClick={() => router.push("/signin")}>Sign in</div>
+                <div className='link' onClick={() => router.push("/profiles")}>
+                    <img src='/images/generic/profile.png' height={45} width={45}/>
+                    
+                </div>
             </div>
         </div>
     )
